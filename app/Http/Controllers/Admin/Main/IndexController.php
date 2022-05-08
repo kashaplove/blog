@@ -15,8 +15,8 @@ class IndexController extends Controller
         $data = [];
         $data['usersCount'] = User::all()->count();
         $data['categoriesCount'] = Category::all()->count();
-        $data['posts'] = Post::all()->count();
-        $data['tags'] = Tag::all()->count();
+        $data['postsCount'] = Post::all()->count();
+        $data['tagsCount'] = Tag::all()->count();
         return view('admin.main.index', compact('data'));
     }
 }
