@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -100,4 +101,5 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin','middleware' => ['auth
     });
 });
 
+Auth::routes();
 
