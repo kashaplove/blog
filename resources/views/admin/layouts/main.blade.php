@@ -39,6 +39,9 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
             </ul>
+            <div class="d-flex align-items-center">
+                <a href="{{ route('main.index') }}" style="font-size: 20px"><b>На сайт</b></a>
+            </div>
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <form action="{{ route('logout') }}" method="post">
