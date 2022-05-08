@@ -58,9 +58,6 @@
     <!-- Content Wrapper. Contains page content -->
     @yield('content')
     <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <strong>Blog</strong>
-    </footer>
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">

@@ -18,9 +18,15 @@ Route::group(['namespace' => 'Main'], function () {
     Route::get('/', 'IndexController');
 });
 
+Route::group(['namespace' => 'Personal', 'prefix' => 'personal','middleware' => ['auth','verified']], function () {
+    Route::group(['namespace' => 'Main'], function () {
+        Route::get('/', 'IndexController')->name('personal.main.index');
+    });
+});
+
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin','middleware' => ['auth','admin']], function () {
     Route::group(['namespace' => 'Main'], function () {
-        Route::get('/', 'IndexController');
+        Route::get('/', 'IndexController')->name('admin.main.index');
     });
     Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function () {
         Route::get('/', 'IndexController')->name('admin.category.index');
